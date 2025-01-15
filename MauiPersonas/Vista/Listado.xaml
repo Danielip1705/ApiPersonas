@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiPersonas.Vista.ListadoPersonas"
+             x:Class="MauiPersonas.Vista.Listado"
              xmlns:VM="clr-namespace:MauiPersonas.Models"
-             Title="ListadoPersonas">
+             Title="Listado">
+    
     <ContentPage.BindingContext>
         <VM:PersonasVM></VM:PersonasVM>
     </ContentPage.BindingContext>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:VM="clr-namespace:MostrarApi.Models"
+             x:Class="MostrarApi.MainPage">
+
+    <ContentPage.BindingContext>
+        <VM:PersonasVM></VM:PersonasVM>
+    </ContentPage.BindingContext>
+        <StackLayout>
+            <Label Text="CRUD PERSONNAS" HorizontalOptions="Center" VerticalOptions="Center"></Label> 
+            <ListView ItemsSource="{Binding ListadoPersonas}" SelectedItem="{Binding PersonaSeleccionada}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Nombre}" FontSize="Medium"></Label>
+                                <Label Text="{Binding Direccion}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <HorizontalStackLayout>
+            <Button
+                HeightRequest="50"
+                WidthRequest="50"
+                CornerRadius="100"
+                BackgroundColor="LightGreen"
+                Text="+"
+                FontSize="Large"
+                Command="{Binding CrearCommand}"/>
+        </HorizontalStackLayout>
+        </StackLayout>
+</ContentPage>

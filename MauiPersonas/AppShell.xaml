@@ -10,6 +10,12 @@
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:ListadoPersonas}"
-        Route="MainPage" />
+        Route="Principal" />
+    <ShellContent
+        Title="Principal"
+        ContentTemplate="{DataTemplate local:Listado}"
+        Route="Listado"/>
+
+
 
 </Shell>
